@@ -1,0 +1,32 @@
+
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="assets/descarga.png" id="icon" alt="User Icon" />
+    </div>
+<form [formGroup]="TiempoForm" (ngSubmit)="onTime(TiempoForm.value)">
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Input para Token -->
+      <input type="text" id="CustomToken" class="fadeIn third" placeholder="Token" formControlName="Token">
+<br><br>
+      <!-- Input para Tipo -->
+      <input type="text" id="Tipo" class="fadeIn second" placeholder="Tipo" formControlName="Tipo">
+<br><br>
+      <!-- Input para Valor -->
+      <input type="text" id="Valor" class="fadeIn third" placeholder="Valor" formControlName="Valor">
+<br><br>
+      <!-- Botón de submit -->
+      <input type="submit" class="fadeIn fourth" value="Execute">
+    </div>
+  </div>
+</form>

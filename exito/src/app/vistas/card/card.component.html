@@ -1,0 +1,51 @@
+<!--*****************************************************-->
+  <!-- DateTables -->
+  <!--*****************************************************-->
+  <div class="panel-body no-padding">
+    <div class="table-responsive">
+      <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"
+        class="table table-striped table-primary display nowrap">
+        <thead>
+          <tr>
+            <th style="width: 68px;">Acciones</th>
+            <th>Id Provedor</th>
+            <th>Proveedor</th>
+            <th>Observaciones</th>
+            <th>Nacional</th>
+          </tr>
+        </thead>
+        <tbody *ngIf="lststi != null; else elseBlockL">
+          <tr *ngFor="let sti of lststi; let i = index">
+            <td *ngIf="submodule.modificar; else celdaVaciaAccion">
+              <p class="NoDesbord">
+                <span class='btn btn-info btn-sm' style='margin-right: 5%;margin-bottom: 5px;' container="body"
+                  tooltip="Editar Inventario" placement="top" [adaptivePosition]="false" (click)="openEditModal(sti)">
+                  <i class='fa fa-pencil'></i>
+                </span>
+                <span class='btn btn-danger btn-sm' container="body" style='margin-right: 5%;margin-bottom: 5px;'
+                  tooltip="Eliminar" placement="top" [adaptivePosition]="false" (click)="deleteP(sti)">
+                  <i class='fa fa-times'></i>
+                </span>
+              </p>
+            </td>
+            <ng-template #celdaVaciaAccion>
+              <td>
+              </td>
+            </ng-template>
+            <td>{{ sti.idProveedor }}</td>
+            <td>{{ sti.proveedor }}</td>
+            <td>{{ sti.observaciones }}</td>
+            <td>{{sti.nacional? 'Si' : 'No'}}</td>
+          </tr>
+        </tbody>
+        <ng-template #elseBlockL>
+          <tbody></tbody>
+        </ng-template>
+      </table>
+    </div>
+  </div>
+  <ngx-spinner type="line-spin-clockwise-fade-rotating" size="default">
+    <!--Spinner message-->
+    <p></p>
+  </ngx-spinner>
+</div>

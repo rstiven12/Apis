@@ -1,0 +1,59 @@
+<div class="bg-white p-4 rounded-lg shadow-md">
+    <div class="flex flex-col items-center justify-between mb-4">
+      <h1 class="text-2xl font-semibold text-teal-700">Transacción</h1>
+      <div class="flex items-center justify-between">
+        <p class="text-sm text-gray-500">ID: TRX-123456</p>
+        <br><br>
+
+      </div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div class="col-span-1">
+        <p class="text-sm font-medium text-gray-700">Fecha:</p>
+        <p class="text-sm text-gray-900">2023-08-02</p>
+      </div>
+      <div class="col-span-1">
+        <p class="text-sm font-medium text-gray-700">Importe:</p>
+        <p class="text-sm text-gray-900">$1,000</p>
+      </div>
+      <div class="col-span-1">
+        <p class="text-sm font-medium text-gray-700">Concepto:</p>
+        <p class="text-sm text-gray-900">Compra de productos</p>
+      </div>
+      <div class="col-span-1">
+        <p class="text-sm font-medium text-gray-700">Cliente:</p>
+        <p class="text-sm text-gray-900">Stiven berrio</p>
+      </div>
+      <div class="col-span-1">
+        <p class="text-sm font-medium text-gray-700">Cuenta:</p>
+        <p class="text-sm text-gray-900">1234567890</p>
+
+        <button routerLink="/correo" routerLinkActive="active" class="btn btn-primary" style="background-color: whitesmoke; color: black;">
+            Enviar a correo
+          </button><br><br>
+          <button routerLink="/dashboard" routerLinkActive="active" class="btn btn-primary" style="background-color: red; color: black;">
+            Salir
+          </button>
+      </div>
+    </div>
+  </div>
+  <strong>¿Que servicio de correo deseas que te llegue la transacciones</strong>
+  <br> <br>
+    <!-- correo -->
+    <div class="flex items-center gap-4">  <a href="https://www.microsoft.com/es-co/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook" class="text-red-500">
+        <img src="../../../assets/outlok.jpg" width="30" height="30" alt="pn" />
+      </a>
+      <a href="https://accounts.google.com/AccountChooser/signinchooser?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&flowName=GlifWebSignIn&flowEntry=AccountChooser&ec=asw-gmail-globalnav-signin&theme=glif" class="text-red-500">
+        <img src="../../../assets/gmail-svgrepo-com.svg" width="30" height="30" alt="pn" />
+      </a>
+      <a href="https://mail.yahoo.com/?.lang=es-CO" class="text-red-500">
+        <img src="../../../assets/yaho.jpg" width="30" height="30" alt="pn" />
+      </a>
+      <a href="https://proton.me/es-419/mail" class="text-red-500">
+        <img src="../../../assets/proton.jpg" width="30" height="30" alt="pn" />
+      </a>
+      <a href="https://mailchimp.com/es/help/create-an-account/" class="text-red-500">
+        <img src="../../../assets/mal.png" width="30" height="30" alt="pn" />
+      </a>
+    </div>
+    

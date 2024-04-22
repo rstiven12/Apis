@@ -1,0 +1,38 @@
+.btn {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0069d9;
+    color: #fff;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .btn-danger:hover {
+    background-color: #bd2130;
+    color: #fff;
+  }
+  
+  .btn-dark {
+    background-color: #343a40;
+    color: #fff;
+  }
+  
+  .btn-dark:hover {
+    background-color: #282c33;
+    color: #fff;
+  }

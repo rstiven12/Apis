@@ -1,0 +1,28 @@
+
+
+  .btn {
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .btn:hover {
+    background-color: #004080;
+  }
+  
+  .btn.active {
+    background-color: #0080ff;
+  }
+
+  
+
+  
+  
+  
+  

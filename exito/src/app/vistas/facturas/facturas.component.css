@@ -1,0 +1,17 @@
+.border-collapse {
+    border-collapse: collapse;
+  }
+  
+  .btn {
+    background-color: blue;
+    color: white;
+  }
+  
+  .btn:hover {
+    background-color: darkblue;
+  }
+  
+  .btn:active {
+    background-color: navy;
+  }
+  

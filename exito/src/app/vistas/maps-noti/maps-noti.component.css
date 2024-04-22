@@ -1,0 +1,16 @@
+.centered-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color: black;
+    /* Otros estilos que desees agregar */
+  }
+  
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  

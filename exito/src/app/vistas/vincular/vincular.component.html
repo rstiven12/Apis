@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title></title>
+
+    <style>
+        body {
+            background-image: url('../../../assets/negro.jpg'); /* Ruta de tu imagen de fondo */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            opacity: 0.9; /* Ajusta la opacidad según sea necesario */
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 flex flex-col items-center justify-center h-screen">
+
+    <div class="flex flex-col items-center mt-8">
+        <strong class="text-white text-xl mb-4">¿Qué Banco usará?</strong>
+
+        <div class="flex space-x-4 mb-4">
+            <a href="https://transacciones.davivienda.com/transaccional/" class="text-blue-500">
+                <img src="../../../assets/davivienda.jpg" width="30" height="30" alt="tw" />
+            </a>
+            <a href="https://virtual.bancodebogota.co/" class="text-pink-500">
+                <img src="../../../assets/bg.png" width="30" height="30" alt="inst" />
+            </a>
+            <a href="https://www.avvillas.com.co/bancadigital/inicio" class="text-gray-600">
+                <img src="../../../assets/av.png" width="30" height="30" alt="gt" />
+            </a>
+            <a href="https://www.bancolombia.com/personas/login" class="text-red-500">
+                <img src="../../../assets/bancolombia.png" width="30" height="30" alt="pn" />
+            </a>
+            <a href="https://www.nequi.com.co/" class="text-blue-700">
+                <img src="../../../assets/nequi.png" width="30" height="30" alt="in" />
+            </a>
+        </div>
+    </div>
+
+    <p class="font-sans p-8 text-start md:text-center md:text-lg md:p-4 text-white">© 2023 Viajes Exitos. Todos los derechos reservados.</p>
+    <button routerLink="/diagrama" routerLinkActive="active" class="btn btn-danger">
+        Atras
+    </button>
+</body>
+</html>

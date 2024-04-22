@@ -1,0 +1,498 @@
+<!-- component -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body class="relative antialiased bg-gray-100">
+    <!-- Start Nav -->
+    <div class="fixed bottom-4 right-4 xl:right-20">
+        <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjb-dXp05uDAxUUiVoFHVj-BlYYABACGgJ2dQ&ase=2&gclid=Cj0KCQiAm4WsBhCiARIsAEJIEzUO90xucv3nprBm7aqwk3oKsy70Lyf7iLB-OLZZeu88btBu4_TVcjEaAowqEALw_wcB&ohost=www.google.com&cid=CAESV-D2o5PEswZ1vDAvmIuPTkYuLdkqwFmArq4KMzJ0nFbOPwQZdWxPMhs-AKS9fOyk0ESFKLI3rv7F8z1DeofIpfvFn1kwdG_v_lHDAGajketkp8Ui9uYHvw&sig=AOD64_2PfhSBulFOWX1Jej94eRbjNx4zXQ&q&nis=4&adurl&ved=2ahUKEwiZlNDp05uDAxUStTEKHd_uDJ8QqyQoAHoECAgQDA" target="_blank"
+            class="transform duration-500 ease-in-out animate-bounce bg-red-400 px-4 py-3 font-mono font-semibold rounded-lg shadow hover:shadow-xl flex justify-between items-center gap-4">
+            <img class="w-8 h-8 rounded"
+                src="../../../assets/viajes.png"
+                alt="buymeacoffee">
+           Entra a viajes exito
+        </a>
+    </div>
+    <nav class="p-4 md:py-8 xl:px-0 md:container md:mx-w-6xl md:mx-auto">
+        <div class="hidden lg:flex lg:justify-between lg:items-center">
+            <a href="dashboard" class="flex items-start gap-2 group">
+                <div class="bg-blue-600 text-white p-2 rounded-md group-hover:bg-blue-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <p class="text-sm font-light uppercase">
+                    Inicio
+                    <span class="text-base block font-bold tracking-widest">
+                       Perfil
+                    </span>
+                </p>
+            </a>
+            <ul class="flex items-center space-x-4 text-sm font-semibold">
+                <li><a href="profile" class="px-2 xl:px-4 py-2 text-gray-800 rounded-md hover:bg-gray-200">Mi cuenta</a></li>
+                <li class="relative" x-data="{ open: false }">
+                    <a x-on:click="open = !open" x-on:click.outside="open = false" href="transaciones"
+                        class="px-2 xl:px-4 py-2 text-gray-600 rounded-md hover:bg-gray-200 flex gap-2 items-center">
+                        Transaciones
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 stroke-current stroke-2 text-gray-800 transform duration-500 ease-in-out" :class="open ? 'rotate-90' : ''"  fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg> </a>
+                    <ul x-cloak x-show="open" x-transition
+                        class="absolute top-10 left-0 bg-white p-4 rounded-md shadow overflow-hidden w-64">
+                        <li>
+                            <a href="transaciones"
+                                class="p-4 block text-sm text-gray-600 rounded flex items-center gap-2 hover:bg-gray-100">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                                Transaciones ABC
+                            </a>
+                        </li>
+                        <li>
+                            <a href="transaciones"
+                                class="p-4 block text-sm text-gray-600 rounded flex items-center gap-2 hover:bg-gray-100">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                                Transaciones DEF
+                            </a>
+                        </li>
+                        <li>
+                            <a href="transaciones"
+                                class="p-4 block text-sm text-gray-600 rounded flex items-center gap-2 hover:bg-gray-100">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                                Transaciones GHI
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="./tarjeta" class="px-2 xl:px-4 py-2 text-gray-600 rounded-md hover:bg-gray-200">Tarjeta </a></li>
+                <li><a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjTkaGE_5mDAxWIrVoFHaTKDbIYABAAGgJ2dQ&ase=2&gclid=CjwKCAiA-P-rBhBEEiwAQEXhH5Vuz7HkZYF4HRDJoojgwBva7-4BWPQYpItkCd8FWB5pQ6DRPyJP6BoCbsgQAvD_BwE&ohost=www.google.com&cid=CAESVuD2oLNhbvpD8UwQov7e5GRXwIj4fLa1nlb_8U34oRwcaUp6adbNCq31Q0gkF-IDNuXOdP3LZVxeosApiTidF3CzbhPYkHUx4CwoXIcgZJ8mANKk5QV-&sig=AOD64_31HKiTqdbqaU2v-CLPVtsDRJe54g&q&nis=4&adurl&ved=2ahUKEwjGhpyE_5mDAxVsmYQIHaXZDD8Q0Qx6BAgJEAE" class="px-2 xl:px-4 py-2 text-gray-600 rounded-md hover:bg-gray-200">Ofertas</a></li>
+            </ul>
+            <ul class="flex space-x-2 xl:space-x-4 text-sm font-semibold">
+                
+                <li>
+                    <a href="https://accounts.google.com/AccountChooser/signinchooser?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&flowName=GlifWebSignIn&flowEntry=AccountChooser&ec=asw-gmail-globalnav-signin&theme=glif">
+                        <div class="p-2 rounded hover:bg-gray-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 stroke-current text-gray-800"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                    </a>
+                </li>
+                <li>
+
+                    <!-- agregar otra noti -->
+                    <a href="notificacion">
+                        <div class="p-2 rounded hover:bg-gray-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 stroke-current text-gray-800"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                            </svg>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="flex items-center gap-6">
+                <li>
+                    <a href="https://www.microsoft.com/es-co/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook" class="text-sm font-sans text-gray-800 font-semibold tracking-wider">
+                        Stiven Berrio
+                    </a>
+                </li>
+                <li>
+                    <a href="dashboard">
+                        <div class="p-2 rounded hover:bg-gray-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 stroke-current text-gray-800"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                            </svg>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div x-data="{ open: false }" class="lg:hidden relative flex justify-between w-full">
+            <a href="transaciones" class="flex items-start gap-2 group">
+                <div class="bg-blue-600 text-white p-3 rounded-md group-hover:bg-blue-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <p class="text-sm font-light uppercase">
+                    Inicio
+                    <span class="text-base block font-bold tracking-widest">
+                       
+                    </span>
+                </p>
+            </a>
+            <button x-on:click="open = !open" type="button" class="bg-gray-200 p-3 rounded-md">
+                <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                </svg>
+                <svg x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <div x-show="open" x-transition class="absolute top-14 left-0 right-0 w-full bg-white rounded-md border">
+                <ul class="p-4">
+                    <li class="px-4 py-2 rounded hover:bg-gray-200">
+                        <a href="tarjeta" class="flex items-center gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                            Mi cuenta
+                        </a>
+                    </li>
+                    <li class="px-4 py-2 rounded hover:bg-gray-200">
+                        <a href="transaciones" class="flex items-center gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                            Transaciones
+                        </a>
+                    </li>
+                    <li class="px-4 py-2 rounded hover:bg-gray-200">
+                        <a href="transaciones" class="flex items-center gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                            Tarjetas
+                        </a>
+                    </li>
+                    <li class="px-4 py-2 rounded hover:bg-gray-200">
+                        <a href="#" class="flex items-center gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                            Ofertas
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- End Nav -->
+    <!-- Start Main -->
+    <main class="container mx-w-6xl mx-auto py-4">
+        <div class="flex flex-col space-y-8">
+            <!-- First Row -->
+            <div class="grid grid-cols-1 md:grid-cols-4 xl:grid-cols-5 px-4 xl:p-0 gap-y-4 md:gap-6">
+                <div class="md:col-span-2 xl:col-span-3 bg-white p-6 rounded-2xl border border-gray-50">
+                    <div class="flex flex-col space-y-6 md:h-full md:justify-between">
+                        <div class="flex justify-between">
+                            <span class="text-xs text-gray-500 font-semibold uppercase tracking-wider">
+                                Cuenta principal
+                            </span>
+                            <span class="text-xs text-gray-500 font-semibold uppercase tracking-wider">
+                                Fondos disponibles
+                            </span>
+                        </div>
+                        <div class="flex gap-2 md:gap-4 justify-between items-center">
+                            <div class="flex flex-col space-y-4">
+                                <h2 class="text-gray-800 font-bold tracking-widest leading-tight">Los ahorros de stiven
+                                    Cuenta</h2>
+                                <div class="flex items-center gap-4">
+                                    <p class="text-lg text-gray-600 tracking-wider">**** **** *0118</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <h2 class="text-lg md:text-xl xl:text-3xl text-gray-700 font-black tracking-wider">
+                                <span class="md:text-xl">$</span>
+                                92,817.45
+                            </h2>
+                        </div>
+                        <div class="flex gap-2 md:gap-4">
+                            <a href="nt"
+                                class="bg-blue-600 px-5 py-3 w-full text-center md:w-auto rounded-lg text-white text-xs tracking-wider font-semibold hover:bg-blue-800">
+                                Transferir dinero
+                            </a>
+                            <a href="vincular"
+                                class="bg-blue-50 px-5 py-3 w-full text-center md:w-auto rounded-lg text-blue-600 text-xs tracking-wider font-semibold hover:bg-blue-600 hover:text-white">
+                                Vincular cuenta
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="col-span-2 p-6 rounded-2xl bg-gradient-to-r from-red-500 to-red-800 flex flex-col justify-between">
+                    <div class="flex flex-col">
+                        <p class="text-white font-bold">Viajes Exitos</p>
+                        <p class="mt-1 text-xs md:text-sm text-gray-50 font-light leading-tight max-w-sm">
+                           
+Viajes Éxito es una agencia de viajes colombiana perteneciente al Grupo Éxito. Ofrece una amplia gama de productos y servicios turísticos, incluyendo vuelos, hoteles, paquetes de viajes, tours, renta de autos, y más.
+                        </p>
+                    </div>
+                    <div class="flex justify-between items-end">
+                        <a href="tarjeta"
+                            class="bg-blue-800 px-4 py-3 rounded-lg text-white text-xs tracking-wider font-semibold hover:bg-blue-600 hover:text-white">
+                            Mi tarjeta
+                        </a>
+                        <img src="" alt="" class="w-auto h-24 object-cover">
+                    </div>
+                </div>
+
+            </div>
+            <!-- End First Row -->
+            <!-- Start Second Row -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-4 xl:p-0 gap-4 xl:gap-6">
+                <div class="col-span-1 md:col-span-2 lg:col-span-4 flex justify-between">
+                    <h2 class="text-xs md:text-sm text-gray-700 font-bold tracking-wide md:tracking-wider">
+                        Gastos por categoría</h2>
+                    <a href="#" class="text-xs text-gray-800 font-semibold uppercase">Más</a>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-50">
+                    <div class="flex justify-between items-start">
+                        <div class="flex flex-col">
+                            <p class="text-xs text-gray-600 tracking-wide">Alimentos y bebidas</p>
+                            <h3 class="mt-1 text-lg text-gray-500 font-bold">$ 818.000</h3>
+                            <span class="mt-4 text-xs text-gray-500">Última transacción hace 3 horas</span>
+                        </div>
+                        <div class="bg-gray-50 p-2 md:p-1 xl:p-2 rounded-md">
+                            <img src="../../../assets/icon1.jpg" alt="icon" class="w-auto h-8 md:h-6 xl:h-8 object-cover">
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-50">
+                    <div class="flex justify-between items-start">
+                        <div class="flex flex-col">
+                            <p class="text-xs text-gray-600 tracking-wide">Comestibles</p>
+                            <h3 class="mt-1 text-lg text-green-500 font-bold">$ 891.908</h3>
+                            <span class="mt-4 text-xs text-gray-500">Última transacción hace 3 horas</span>
+                        </div>
+                        <div class="bg-gray-50 p-2 md:p-1 xl:p-2 rounded-md">
+                            <img src="../../../assets/icon2.png" alt="icon" class="w-auto h-8 md:h-6 xl:h-8 object-cover">
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-50">
+                    <div class="flex justify-between items-start">
+                        <div class="flex flex-col">
+                            <p class="text-xs text-gray-600 tracking-wide">Juegos</p>
+                            <h3 class="mt-1 text-lg text-yellow-500 font-bold">$ 122.903</h3>
+                            <span class="mt-4 text-xs text-gray-600">Última transacción hace 7 horas</span>
+                        </div>
+                        <div class="bg-gray-50 p-2 md:p-1 xl:p-2 rounded-md">
+                            <img src="../../../assets/icon3.png" alt="icon" class="w-auto h-8 md:h-6 xl:h-8 object-cover">
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-50">
+                    <div class="flex justify-between items-start">
+                        <div class="flex flex-col">
+                            <p class="text-xs text-gray-600 tracking-wide">Viaje y vacaciones</p>
+                            <h3 class="mt-1 text-lg text-indigo-500 font-bold">$ 591.098</h3>
+                            <span class="mt-4 text-xs text-gray-500">Última transacción hace 9 horas</span>
+                        </div>
+                        <div class="bg-gray-50 p-2 md:p-1 xl:p-2 rounded-md">
+                            <img src="../../../assets/icon4.png" alt="icon" class="w-auto h-8 md:h-6 xl:h-8 object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Second Row -->
+            <!-- Start Third Row -->
+            <div class="grid grid-cols-1 md:grid-cols-5 items-start px-4 xl:p-0 gap-y-4 md:gap-6">
+                <div class="col-start-1 col-end-5">
+                    <h2 class="text-xs md:text-sm text-gray-800 font-bold tracking-wide">Transacciones resumidas</h2>
+                </div>
+                <div class="col-span-2 bg-white p-6 rounded-xl border border-gray-50 flex flex-col space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 flex justify-between items-center">
+                        <div class="p-4 cursor-pointer border">
+                            <span class="text-xs text-gray-500 font-semibold">A diario</span>
+                            <h2 class="text-gray-800 font-bold tracking-wider">$ 27.806</h2>
+                        </div>
+                        <div class="p-4 cursor-pointer border">
+                            <span class="text-xs text-gray-500 font-semibold">Semanalmente</span>
+                            <h2 class="text-gray-800 font-bold tracking-wider">$ 192.925</h2>
+                        </div>
+                        <div class="p-4 cursor-pointer border">
+                            <span class="text-xs text-gray-500 font-semibold">Mensual</span>
+                            <h2 class="text-gray-800 font-bold tracking-wider">$ 501.107</h2>
+                        </div>
+                    </div>
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div class="col-span-3 bg-white p-6 rounded-xl border border-gray-50 flex flex-col space-y-6">
+                    <div class="flex justify-between items-center">
+                        <h2 class="text-sm text-gray-600 font-bold tracking-wide">Últimas transacciones</h2>
+                        <a href="mt"
+                            class="px-4 py-2 text-xs bg-blue-100 text-blue-500 rounded uppercase tracking-wider font-semibold hover:bg-blue-300">Mandar transacciones</a>
+                    </div>
+                    <ul class="divide-y-2 divide-gray-100 overflow-x-auto w-full">
+                        <li class="py-3 flex justify-between text-sm text-gray-500 font-semibold">
+                            <p class="px-4 font-semibold">Hoy</p>
+                            <p class="px-4 text-gray-600">McDonald</p>
+                            <p class="px-4 tracking-wider">Dinero</p>
+                            <p class="px-4 text-blue-600">Alimento</p>
+                            <p class="md:text-base text-gray-800 flex items-center gap-2">
+                                166.904
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </p>
+                        </li>
+                        <li class="py-3 flex justify-between text-sm text-gray-500 font-semibold">
+                            <p class="px-4 font-semibold">Hoy</p>
+                            <p class="px-4 text-gray-600">McDonald</p>
+                            <p class="px-4 tracking-wider">Dinero</p>
+                            <p class="px-4 text-blue-600">Alimento</p>
+                            <p class="md:text-base text-gray-800 flex items-center gap-2">
+                                516.904
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </p>
+                        </li>
+                        <li class="py-3 flex justify-between text-sm text-gray-500 font-semibold">
+                            <p class="px-4 font-semibold">Hoy</p>
+                            <p class="px-4 text-gray-600">McDonald</p>
+                            <p class="px-4 tracking-wider">Dinero</p>
+                            <p class="px-4 text-blue-600">Alimento</p>
+                            <p class="md:text-base text-gray-800 flex items-center gap-2">
+                                165.950
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </p>
+                        </li>
+                        <li class="py-3 flex justify-between text-sm text-gray-500 font-semibold">
+                            <p class="px-4 font-semibold">Hoy</p>
+                            <p class="px-4 text-gray-600">McDonald</p>
+                            <p class="px-4 tracking-wider">Dinero</p>
+                            <p class="px-4 text-blue-600">Alimento</p>
+                            <p class="md:text-base text-gray-800 flex items-center gap-2">
+                                162.903
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </p>
+                        </li>
+                        <li class="py-3 flex justify-between text-sm text-gray-500 font-semibold">
+                            <p class="px-4 font-semibold">Hoy</p>
+                            <p class="px-4 text-gray-600">McDonald</p>
+                            <p class="px-4 tracking-wider">Dinero</p>
+                            <p class="px-4 text-blue-600">Alimento</p>
+                            <p class="md:text-base text-gray-800 flex items-center gap-2">
+                                163.902
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </p>
+                        </li>
+                        <li class="py-3 flex justify-between text-sm text-gray-500 font-semibold">
+                            <p class="px-4 font-semibold">Hoy</p>
+                            <p class="px-4 text-gray-600">McDonald</p>
+                            <p class="px-4 tracking-wider">Dinero</p>
+                            <p class="px-4 text-blue-600">Alimento</p>
+                            <p class="md:text-base text-gray-800 flex items-center gap-2">
+                                164.904
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- End Third Row -->
+        </div>
+    </main>
+    <!-- End Main -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js"></script>
+    <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+
+        const data = {
+            labels: [
+                'Food & beverages',
+                'Groceries',
+                'Gaming',
+                'Trip & holiday',
+            ],
+            datasets: [{
+                label: 'Total Expenses',
+                data: [148, 150, 130, 170],
+                backgroundColor: [
+                    '#3B82F6',
+                    '#10B981',
+                    '#6366F1',
+                    '#F59E0B'
+                ]
+            }]
+        };
+
+        const config = {
+            type: 'polarArea',
+            data: data,
+            options: {
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    },
+                }
+            }
+        };
+
+        const chart = new Chart(ctx, config);
+    </script>
+
+</body>
+
+</html>
